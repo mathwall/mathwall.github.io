@@ -1,0 +1,32 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fr.fauna",
+      "sha256_cert_fingerprints": [
+        "3B:2B:B9:D2:40:93:68:D5:F2:06:36:1C:DE:9A:14:5F:57:EC:ED:B2:F3:65:4B:93:FF:F7:E2:BD:C0:AE:09:1E"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fr.fauna.preprod",
+      "sha256_cert_fingerprints": [
+        "3B:2B:B9:D2:40:93:68:D5:F2:06:36:1C:DE:9A:14:5F:57:EC:ED:B2:F3:65:4B:93:FF:F7:E2:BD:C0:AE:09:1E"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fr.fauna.integration",
+      "sha256_cert_fingerprints": [
+        "3B:2B:B9:D2:40:93:68:D5:F2:06:36:1C:DE:9A:14:5F:57:EC:ED:B2:F3:65:4B:93:FF:F7:E2:BD:C0:AE:09:1E"
+      ]
+    }
+  }
+]

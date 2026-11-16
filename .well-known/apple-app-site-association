@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "QVR87U6683.fr.fauna.fauna-app.dev",
+          "QVR87U6683.fr.fauna.fauna-app.staging"
+        ],
+        "components": [
+          { "/": "/app/enquete/*", "comment": "Survey QR code: /app/enquete/<cle>" }
+        ]
+      }
+    ]
+  }
+}

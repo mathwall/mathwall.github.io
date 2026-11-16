@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAUNA</title>
+  <script>
+    // GitHub Pages has no wildcard routes: every unknown path, including
+    // /app/enquete/<cle>, is served by this page. When FAUNA is installed the
+    // phone opens the app instead and this page is never shown.
+    (function () {
+      var match = location.pathname.match(/^\/app\/enquete\/([^\/]+)\/?$/);
+      if (!match) return;
+      var cle = match[1];
+      var ua = navigator.userAgent;
+      var isIOS = /iPhone|iPad|iPod/.test(ua) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+      var play = "https://play.google.com/store/apps/details?id=fr.fauna" +
+        "&referrer=" + encodeURIComponent("cle=" + cle);
+      var appStore = "https://apps.apple.com/fr/app/fauna/id6470035772";
+      if (isAndroid) location.replace(play);
+      else if (isIOS) location.replace(appStore);
+      else document.documentElement.className = "desktop";
+    })();
+  </script>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; margin: 40px 16px; text-align: center; color: #222; background: #fff; }
+    .stores { display: none; }
+    .desktop .stores { display: block; }
+    .desktop .notfound { display: none; }
+    a { display: block; margin: 12px; color: #00796b; }
+  </style>
+</head>
+<body>
+  <h1>FAUNA</h1>
+  <p class="notfound">Page introuvable.</p>
+  <div class="stores">
+    <p>Scannez ce QR code avec votre téléphone, ou installez FAUNA :</p>
+    <a href="https://play.google.com/store/apps/details?id=fr.fauna">Google Play</a>
+    <a href="https://apps.apple.com/fr/app/fauna/id6470035772">App Store</a>
+  </div>
+</body>
+</html>
